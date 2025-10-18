@@ -15,3 +15,8 @@ class MyStackInt:
             raise IndexError("pop from empty stack")
         self._max_stack.pop()
         return self._stack.pop()
+    
+    def max(self) -> int:
+        if not self._max_stack:
+            raise IndexError("max from empty stack")
+        return self._max_stack[-1]
